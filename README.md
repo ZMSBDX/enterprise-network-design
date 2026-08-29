@@ -55,6 +55,11 @@ Addressing follows a consistent `10.10.X0.0/24` (HQ) / `10.10.1X0.0/24` (Branch)
 - **NAT / PAT:** all private `10.10.x.x` traffic is translated to a single public IP on the HQ internet edge via PAT (`ip nat ... overload`), so hundreds of internal hosts can share one public address.
 - **Wireless (WLC):** a Wireless LAN Controller centrally manages all lightweight access points (LAPs) across floors, instead of configuring every AP by hand — each department gets its own SSID/VLAN (e.g. `IT-WiFi`, `Finance-WiFi`, `Guest-WiFi`).
 
+### Wireless AP Groups (WLC)
+
+![HQ AP Group — department SSIDs](assets/wlc-hq-ap-group.png)
+![Branch AP Group — department SSIDs](assets/wlc-branch-ap-group.png)
+
 ## Security
 
 Security is layered at multiple points rather than relying on a single firewall:
